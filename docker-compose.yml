@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bert-service:
+    build: .
+    container_name: bert_container
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app  # BERT
+    environment:
+      - PYTHONUNBUFFERED=1  # Realtime Logs
